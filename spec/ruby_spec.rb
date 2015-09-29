@@ -20,13 +20,13 @@ describe "insertion sort" do
   end
 
   it "returns sorted array of input" do
-    source = [2, 6, 4, 9, 6, 8, 10, 7]
+    source = [6, 2, 4, 9, 6, 8, 10, 7]
     assert_equal result, source.insertion_sort
     refute_equal result, source
   end
 
   it "returns sorted array mutating input" do
-    source = [2, 6, 4, 9, 6, 8, 10, 7]
+    source = [6, 2, 4, 9, 6, 8, 10, 7]
     assert_equal result, source.insertion_sort!
     assert_equal result, source
   end
