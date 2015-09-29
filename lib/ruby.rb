@@ -1,16 +1,16 @@
-class Sort
-  def initialize(array)
-    @array = array
+class Array
+  def insertion_sort
+    Array.new(self).insertion_sort!
   end
 
-  def insertion
-    0.upto(@array.length - 2) do |n|
-      value = @array[n + 1]
+  def insertion_sort!
+    0.upto(length - 2) do |n|
+      value = self[n + 1]
       n.downto(0) do |i|
-        @array[i + 1] = @array[i] <= value ? value : @array[i]
-        break if @array[i] <= value
+        self[i + 1] = self[i] <= value ? value : self[i]
+        break if self[i] <= value
       end
     end
-    @array
+    self
   end
 end
